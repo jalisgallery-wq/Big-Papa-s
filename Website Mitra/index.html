@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big Papa's Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar-in">
+    <!-- GANTI: taruh logo di assets/logo.png -->
+    <img id="logo" class="logo" src="Assets/Thankyou beh 2.png" alt="Big Papa's Kitchen">
+    <div class="greet">
+      <h1>Halo, Pelanggan!</h1>
+      <p>Selamat datang di Big Papa's Kitchen!</p>
+    </div>
+  </div>
+</header>
+<div class="hspace" aria-hidden="true"></div>
+
+<!-- ========== HALAMAN MENU ========== -->
+<div id="page-menu">
+  <nav class="tabs"><div class="wrap">
+    <span class="tab-ind"></span>
+    <a href="#ramen" data-target="sec-ramen">RAMEN</a>
+    <a href="#nasi" data-target="sec-nasi">NASI</a>
+    <a href="#minum" data-target="sec-minum">MINUM</a>
+  </div></nav>
+
+  <main class="wrap content">
+    <section class="promo" id="promo" aria-roledescription="carousel" aria-label="Promo">
+      <div class="promo-track" id="promo-track" tabindex="0"></div>
+      <button class="promo-nav prev" id="promo-prev" aria-label="Sebelumnya">&#8249;</button>
+      <button class="promo-nav next" id="promo-next" aria-label="Berikutnya">&#8250;</button>
+      <div class="promo-dots" id="promo-dots"></div>
+    </section>
+
+    <h2 class="heading">RECOMENDATION</h2>
+    <div id="rec-list" class="rec-grid"></div>
+
+    <h2 class="heading" id="sec-ramen">RAMEN</h2>
+    <div id="list-ramen" class="menu-grid"></div>
+
+    <h2 class="heading" id="sec-nasi">NASI</h2>
+    <div id="list-nasi" class="menu-grid"></div>
+
+    <h2 class="heading" id="sec-minum">MINUM</h2>
+    <div id="list-minum" class="menu-grid"></div>
+  </main>
+
+  <div class="cartbar" id="cartbar" aria-live="polite">
+    <div class="cart-chip" id="cart-chip"></div>
+    <button class="cart-pill" id="btn-pesan" aria-label="Lihat pesanan">
+      <svg class="cart-ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-info">
+        <small><span id="bar-count">0</span> item</small>
+        <strong id="bar-total">Rp. 0</strong>
+      </span>
+      <span class="cart-cta">PESAN BEH!!
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </span>
+    </button>
+  </div>
+</div>
+
+<!-- ========== HALAMAN DAFTAR PESANAN ========== -->
+<div id="page-order" hidden>
+  <div class="page-title"><div class="wrap title-row">
+    <button id="btn-back" class="back-btn" aria-label="Kembali ke menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10H4M9 5l-5 5 5 5"/></svg>
+    </button>
+    <h1>DAFTAR PESANAN</h1>
+  </div></div>
+
+  <main class="wrap order-layout">
+    <div class="order-left">
+      <section class="o-sec">
+        <div class="o-head">
+          <h3 class="o-title">Rincian Pemesanan (<span id="ord-count">0</span> Item)</h3>
+          <button id="btn-tambah-menu" class="link-add">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="8.5"/><path d="M10 6v8M6 10h8"/></svg>
+            Tambah Menu
+          </button>
+        </div>
+        <div id="order-items" class="o-list"></div>
+      </section>
+
+      <section class="o-sec">
+        <h3 class="o-title">Data Pemesan</h3>
+        <div class="fl" id="fl-nama">
+          <input id="nama" type="text" placeholder=" " autocomplete="name">
+          <label for="nama">Nama pemesan</label>
+          <p class="hint">Isi nama dulu ya</p>
+        </div>
+        <div class="fl">
+          <textarea id="catatan" rows="1" placeholder=" "></textarea>
+          <label for="catatan">Catatan khusus (opsional)</label>
+        </div>
+        <div class="chips">
+          <button class="chip" data-t="Tidak pedas">Tidak pedas</button>
+          <button class="chip" data-t="Extra pedas">Extra pedas</button>
+          <button class="chip" data-t="Tanpa bawang">Tanpa bawang</button>
+          <button class="chip" data-t="Kuah dipisah">Kuah dipisah</button>
+        </div>
+      </section>
+    </div>
+
+    <aside class="order-right">
+      <section class="o-sum">
+        <h3 class="o-title">Ringkasan Pembayaran</h3>
+        <div class="sum-row">
+          <span>Subtotal (<span id="sum-count">0</span> item)</span>
+          <strong id="sum-total">Rp 0</strong>
+        </div>
+        <button id="btn-wa" class="btn-wa" disabled>
+          <span class="wa-l">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg>
+            Kirim via WhatsApp
+          </span>
+          <strong id="wa-total">Rp 0</strong>
+        </button>
+      </section>
+    </aside>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
