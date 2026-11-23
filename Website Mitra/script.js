@@ -461,7 +461,7 @@ trimLogo($('#logo'));
 const PROMOS = [
   { tag:'Menu Baru', title:'Kari Ramen Hokkaido', sub:'Kuah kari kental, kaya rempah. Hangat sampai tetes terakhir.', img:'Assets/Kari Ramen.webp', c1:'#b91c1c', c2:'#6f0f0f', target:'sec-ramen' },
   { tag:'Favorit',   title:'Shio Ramen Ringan & Gurih', sub:'Kuah kaldu garam yang bening dan menyegarkan.', img:'Assets/Shio Ramen.webp', c1:'#0b5d3b', c2:'#073b26', target:'sec-ramen' },
-  { tag:'Hemat',     title:'Paket Nasi + Minum', sub:'Kenyang tanpa bikin dompet tipis.', img:'Assets/Nasi Telor Jepang.webp', c1:'#d9631e', c2:'#9a3d0a', target:'sec-nasi' },
+  { tag:'Hemat',     title:'Paket Nasi + Minum', sub:'Kenyang tanpa bikin dompet tipis.', img:'Assets/Nasi Goreng Telor Jepang.webp', c1:'#d9631e', c2:'#9a3d0a', target:'sec-nasi' },
 ];
 
 function initPromo(){
