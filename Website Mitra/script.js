@@ -372,7 +372,7 @@ $('#btn-wa').addEventListener('click', () => {
   const catatan = $('#catatan').value.trim();
   const lines = Object.entries(cart).map(([id,q]) => `- ${byId(id).name} x${q} = ${rp2(byId(id).price*q)}`);
   const msg = [
-    `Halo Big Papa's Kitchen, saya mau pesan:`, '',
+    `Halo Beh!, saya mau pesan:`, '',
     `Nama: ${nama}`, '', ...lines, '',
     `Total (${totalQty()} item): ${rp2(totalPrice())}`,
     catatan ? `\nCatatan: ${catatan}` : ''
