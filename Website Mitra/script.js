@@ -1,5 +1,5 @@
 /* ================= CONFIG ================= */
-const WA_NUMBER = '6283872555646'; // GANTI: nomor WhatsApp tujuan (format 62xxx, tanpa + / 0 di depan)
+const WA_NUMBER = '6281911150529'; // GANTI: nomor WhatsApp tujuan (format 62xxx, tanpa + / 0 di depan)
 
 /* Data menu — ganti foto di folder assets/ */
 const MENU = [
